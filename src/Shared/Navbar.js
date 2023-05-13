@@ -18,20 +18,20 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52">
-                            <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link className=''>Home</Link></li>
+                            <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link to='/' className=''>Home</Link></li>
                             <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > Dishes</Link></li>
                             <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > About </Link></li>
-                            <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > Menu </Link></li>
+                            <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link to='/menu'> Menu </Link></li>
                         </ul>
                     </div>
                     <h1 className="btn btn-ghost text-white normal-case text-2xl">Kaffen</h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold  '><Link className=''>Home</Link></li>
+                        <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold  '><Link to="/" className=''>Home</Link></li>
                         <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > Dishes</Link></li>
                         <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > About </Link></li>
-                        <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > Menu </Link></li>
+                        <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link to='/menu'> Menu </Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -52,7 +52,23 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-
+                    <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src="https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu3.jpg" />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary text-white font-bold rounded-box w-52">
+                            <li>
+                                <a className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
