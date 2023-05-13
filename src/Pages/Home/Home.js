@@ -4,7 +4,7 @@ import HomeMenus from '../HomeMenus/HomeMenus';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-primary'>
             <HomeCarousel></HomeCarousel>
             <HomeMenus></HomeMenus>
         </div>

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Espresso Coffee",
+        "img": "https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu2.jpg",
+        "price": "2.3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat."
+    },
+    {
+        "name": "Black Coffee",
+        "img": "https://kaffen.bslthemes.com/wp-content/uploads/2022/03/grid_gal1.jpg",
+        "price": "2.3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat."
+    },
+    {
+        "name": "Americano Coffee",
+        "img": "https://kaffen.bslthemes.com/wp-content/uploads/2022/03/grid_gal2-900x601.jpg",
+        "price": "2.3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat."
+    },
+    {
+        "name": "Barista Pouring Syrup ",
+        "img": "https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu3.jpg",
+        "price": "2.3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat."
+    },
+    {
+        "name": "Cold Coffee",
+        "img": "https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu4.jpg",
+        "price": "2.3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat."
+    },
+    {
+        "name": "Cappuccino Arabica",
+        "img": "https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu5.jpg",
+        "price": "2.3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat."
+    }
+]
