@@ -11,7 +11,7 @@ const Menu = () => {
     const { data: menus = [], isLoading } = useQuery({
         queryKey: ['menus'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/menus`)
+            const res = await fetch(`https://coffee-shop-server-six.vercel.app/menus`)
             const data = await res.json()
             // console.log(data)
             return data

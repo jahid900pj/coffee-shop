@@ -1,11 +1,23 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthProvider';
 
 const Navbar = () => {
     const activeLinks = ({ isActive }) => {
         return {
             borderBottom: isActive && '3px solid black',
         }
+    }
+
+    const { user, logout } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        logout()
+            .then(() => {
+
+            })
+            .catch(err => console.log(err))
     }
 
     return (
@@ -30,8 +42,9 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold  '><Link to="/" className=''>Home</Link></li>
                         <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > Dishes</Link></li>
-                        <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > About </Link></li>
                         <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link to='/menu'> Menu </Link></li>
+                        <li className='text-white hover:text-secondary rounded-lg m-0 p-0 font-bold'><Link > About </Link></li>
+
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -55,7 +68,7 @@ const Navbar = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src="https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu3.jpg" />
+                                <img src="https://kaffen.bslthemes.com/wp-content/uploads/2022/03/menu3.jpg" alt='' />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary text-white font-bold rounded-box w-52">
@@ -66,7 +79,16 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+
+                            {
+                                user?.uid ?
+                                    <Link onClick={handleLogout} className="text-start"><li><a >Log Out</a></li></Link> :
+                                    <Link to='/login' className="">
+                                        <li><a>Login</a></li>
+                                    </Link>
+                            }
+
+                            {/* <li><a>Logout</a></li> */}
                         </ul>
                     </div>
                 </div>
